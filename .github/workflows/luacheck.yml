@@ -18,7 +18,7 @@ jobs:
           packages: lua5.3 liblua5.3-dev luarocks npm curl
           version: 2.0
       - name: Update PATH
-        run: export PATH=$HOME/.luarocks/bin/:$PATH
+        run: echo $HOME/.luarocks/bin/ >> $GITHUB_PATH
       - name: Lint
         run: just lint
       - name: Build
