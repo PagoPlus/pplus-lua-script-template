@@ -2,17 +2,24 @@
 default:
   @just --list
 
+source_files := `find src -name '*.lua'`
+
 # Clean up compiled files
 clean:
-	rm -r build
+  rm -r build
+  rm types/types.lua
 
 # Download latest types
 fetch-types:
-  echo harow
+  curl --silent -o "types/types.lua" -z "types/types.lua" "https://pagoplus.fly.dev/scripts/types.lua"
 
 # Install lua dependencies
 deps:
   luarocks --lua-version 5.3 --local make
+
+# Run the linter
+lint: deps fetch-types
+  luacheck "{{source_files}}"
 
 # Compile the project into a single file for deployment
 build: clean deps fetch-types
