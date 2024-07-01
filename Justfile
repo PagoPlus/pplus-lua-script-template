@@ -2,7 +2,7 @@
 default:
   @just --list
 
-source_files := `find src -name '*.lua'`
+# source_files := `find src -name '*.lua'`
 
 # Clean up compiled files
 clean:
@@ -19,7 +19,7 @@ deps:
 
 # Run the linter
 lint: deps fetch-types
-  luacheck "{{source_files}}"
+  luacheck src/
 
 # Compile the project into a single file for deployment
 build: clean deps fetch-types
