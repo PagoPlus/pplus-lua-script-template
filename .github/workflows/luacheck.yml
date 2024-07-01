@@ -12,7 +12,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: Luacheck
-        uses: lunarmodules/luacheck@v1
+      - uses: extractions/setup-just@v2
+      - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          args: src/
+          packages: lua5.3 luarocks npm
+          version: 1.0
+      - name: Lint
+        run: just lint
+      - name: Build
+        run: just build
