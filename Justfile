@@ -6,8 +6,8 @@ default:
 
 # Clean up compiled files
 clean:
-  rm -r build
-  rm types/types.lua
+  rm -fr build
+  rm -f types/types.lua
 
 # Download latest types
 fetch-types:
