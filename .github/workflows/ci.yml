@@ -1,4 +1,4 @@
-name: Luacheck
+name: CI
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: '*'
 
 jobs:
-  luacheck:
+  ci:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -23,3 +23,5 @@ jobs:
         run: just lint
       - name: Build
         run: just build
+      - name: Test
+        run: just test

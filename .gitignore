@@ -42,3 +42,5 @@ luac.out
 # Auto generated files
 types/types.lua
 build/
+luacov.stats.out
+luacov.report.out

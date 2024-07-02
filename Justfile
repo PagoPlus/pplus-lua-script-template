@@ -31,4 +31,4 @@ watch: build
 
 # Execute tests
 test:
-  busted src/main_test.lua
+  busted --coverage --Xoutput "--color" src/main_test.lua

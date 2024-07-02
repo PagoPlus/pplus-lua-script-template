@@ -1,0 +1,10 @@
+return {
+  include = {
+    "src$",      -- the main module
+    "src%/.+$",  -- and everything namespaced underneath it
+  },
+  exclude = {
+    "src/.+_test$" -- omit tests
+  },
+  runreport = true
+}
