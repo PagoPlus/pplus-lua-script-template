@@ -19,7 +19,7 @@ deps:
 
 # Run the linter
 lint: deps fetch-types
-  luacheck src/ --exclude-files '**/*_test.lua'
+  luacheck src/
 
 # Compile the project into a single file for deployment
 build: clean deps fetch-types

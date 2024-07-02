@@ -4,7 +4,8 @@ return {
     "src%/.+$",  -- and everything namespaced underneath it
   },
   exclude = {
-    "src/.+_test$" -- omit tests
+    "src/.+_test$", -- omit tests
+    "src/helpers/test_helpers.lua", -- omit test helper
   },
   runreport = true
 }
