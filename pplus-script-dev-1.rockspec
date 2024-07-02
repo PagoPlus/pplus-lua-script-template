@@ -13,7 +13,9 @@ Template to create a Script for Pago Plus.
 }
 dependencies = {
   "lua == 5.3",
-  "luacheck"
+  "luacheck",
+  "busted",
+  "luacov"
 }
 build = {
   type = "builtin",

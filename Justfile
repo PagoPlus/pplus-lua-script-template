@@ -29,3 +29,6 @@ build: clean deps fetch-types
 watch: build
   npx luacompact build --watch
 
+# Execute tests
+test:
+  busted src/main_test.lua

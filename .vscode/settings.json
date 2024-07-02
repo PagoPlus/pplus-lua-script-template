@@ -5,6 +5,17 @@
     "coroutine": "disable"
   },
   "Lua.workspace.userThirdParty": [
-    "types/types.lua"
-  ]
+    "types/types.lua",
+    "types/busted.lua",
+    "types/luassert.lua",
+    "types/luassert/array.lua",
+    "types/luassert/match.lua",
+    "types/luassert/mock.lua",
+    "types/luassert/spy.d.lua",
+    "types/luassert/spy.lua",
+    "types/luassert/stub.lua"
+  ],
+  "Lua.type.inferParamType": true,
+  "Lua.type.weakNilCheck": true,
+  "Lua.type.weakUnionCheck": true,
 }
